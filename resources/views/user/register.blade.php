@@ -8,24 +8,23 @@
                     <h2 class="text-center">Register Page</h2>
                 </div>
                 <div class="card-body">
-                    <form action="">
-                        <div class="mb-3">
-                            <label for="">id</label>
-                            <input type="text" class="form-control">
-                        </div>
+                    <form action="{{ route('register_action') }}" method="POST">
+                        @csrf
                         <div class="mb-3">
                             <label for="">name</label>
-                            <input type="text" class="form-control">
+                            <input type="text" name="name" class="form-control" required>
                         </div>
                         <div class="mb-3">
                             <label for="">email</label>
-                            <input type="text" class="form-control">
+                            <input type="email" name="email" class="form-control" required>
                         </div>
                         <div class="mb-3">
                             <labelfor="">password</label>
-                            <input type="text" class="form-control">
+                            <input type="text" name="password" class="form-control" required>
                         </div>
-                        <div class="text-center"><button type="button" class="btn btn-primary">Register</button></div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary">Register</button>
+                        </div>
 
                     </form>
                 </div>

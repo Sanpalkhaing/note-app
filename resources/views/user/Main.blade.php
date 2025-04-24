@@ -3,11 +3,12 @@
 <ul class="nav nav-underline">
 
     <li class="nav-item">
-      <a class="nav-link" href="#">Read</a>
+
+      <a class="nav-link" href="{{ route('note#index') }}">Read</a>
     </li>
 </li>
 <li class="nav-item">
-  <a class="nav-link" href="#">Insert</a>
+  <a class="nav-link" href="{{ route('note#create') }}">Insert</a>
 </li>
 
 </li>

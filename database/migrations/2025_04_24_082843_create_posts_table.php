@@ -11,12 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('notelogins', function (Blueprint $table) {
+        Schema::create('posts', function (Blueprint $table) {
             $table->id();
-            $table->var('email');
-            $table->var('password');
-
-             $table->timestamps();
+            $table->string('title');
+            $table->text('description');
+            $table->bigInteger('user_id');
+            $table->timestamps();
         });
     }
 
@@ -25,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('notelogins');
+        Schema::dropIfExists('posts');
     }
 };
